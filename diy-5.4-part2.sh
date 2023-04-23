@@ -46,6 +46,8 @@ ln -sf ../../../feeds/packages/utils/upx package/feeds/packages/upx
 
 ########### 修改immortal的内置的openclash版本 ###########
 cd feeds/luci/applications
+rm -rf luci-app-openclash/
+svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash luci-app-openclash/
 sed -i 's/clashversion_check();/\/\/&/g' luci-app-openclash/luasrc/view/openclash/status.htm
 rm luci-app-openclash/root/www/luci-static/resources/openclash/img/version.svg
 wget -P luci-app-openclash/root/www/luci-static/resources/openclash/img https://github.com/ximiTech/intelligentclicker/raw/main/version.svg
