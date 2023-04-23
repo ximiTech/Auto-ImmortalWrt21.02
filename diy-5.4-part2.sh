@@ -41,13 +41,20 @@ cd ../../..
 cd feeds/packages/utils
 rm -rf upx/
 svn co https://github.com/immortalwrt/packages/trunk/utils/upx upx/
+rm -rf upx/.svn/
 cd ../../..
 ln -sf ../../../feeds/packages/utils/upx package/feeds/packages/upx
 
-########### 修改immortal的内置的openclash版本 ###########
 cd feeds/luci/applications
+########### 修改immortal的内置的passwall版本 ###########
+rm -rf luci-app-passwall/
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall luci-app-passwall/
+rm -rf luci-app-passwall/.svn/
+
+########### 修改immortal的内置的openclash版本 ###########
 rm -rf luci-app-openclash/
 svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash luci-app-openclash/
+rm -rf luci-app-openclash/.svn/
 sed -i 's/clashversion_check();/\/\/&/g' luci-app-openclash/luasrc/view/openclash/status.htm
 rm luci-app-openclash/root/www/luci-static/resources/openclash/img/version.svg
 wget -P luci-app-openclash/root/www/luci-static/resources/openclash/img https://github.com/ximiTech/intelligentclicker/raw/main/version.svg
