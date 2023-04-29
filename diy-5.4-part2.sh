@@ -53,8 +53,16 @@ rm -rf luci-app-passwall/.svn/
 
 ########### 修改immortal的内置的openclash版本 ###########
 rm -rf luci-app-openclash/
-svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash luci-app-openclash/
-rm -rf luci-app-openclash/.svn/
+# svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash luci-app-openclash/
+# rm -rf luci-app-openclash/.svn/
+git init
+git remote add -f origin https://github.com/vernesong/OpenClash.git
+git config core.sparsecheckout true
+echo "luci-app-openclash" >> .git/info/sparse-checkout
+git pull --depth 1 origin dev
+git branch --set-upstream-to=origin/dev
+git reset --hard f4be994562da9a7db0747f2d08a47ddca8a17088
+rm -rf .git/
 sed -i 's/clashversion_check();/\/\/&/g' luci-app-openclash/luasrc/view/openclash/status.htm
 rm luci-app-openclash/root/www/luci-static/resources/openclash/img/version.svg
 wget -P luci-app-openclash/root/www/luci-static/resources/openclash/img https://github.com/ximiTech/intelligentclicker/raw/main/version.svg
