@@ -74,6 +74,13 @@ jobs:
         cd package/emortal
         git clone https://github.com/ximiTech/luci-app-poweroff.git luci-app-poweroff
 
+    - name: luci-app-adguardhome install
+      run: |
+        cd openwrt
+        cd package/lean
+        svn co https://github.com/ximiTech/openwrt-packages/trunk/luci-app-adguardhome luci-app-adguardhome/
+        rm -rf luci-app-adguardhome/.svn/
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
