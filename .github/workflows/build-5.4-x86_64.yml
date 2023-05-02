@@ -77,7 +77,7 @@ jobs:
     - name: luci-app-adguardhome install
       run: |
         cd openwrt
-        cd package/lean
+        cd package/emortal
         svn co https://github.com/ximiTech/openwrt-packages/trunk/luci-app-adguardhome luci-app-adguardhome/
         rm -rf luci-app-adguardhome/.svn/
 
