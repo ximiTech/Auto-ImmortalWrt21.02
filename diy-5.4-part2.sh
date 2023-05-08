@@ -51,6 +51,11 @@ rm -rf luci-app-passwall/
 svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall luci-app-passwall/
 rm -rf luci-app-passwall/.svn/
 
+########### 修改immortal的内置的luci-app-smartdns版本 ###########
+rm -rf luci-app-smartdns/
+git clone -b master https://github.com/pymumu/luci-app-smartdns.git luci-app-smartdns
+rm -rf luci-app-smartdns/.git/
+
 ########### 修改immortal的内置的openclash版本 ###########
 rm -rf luci-app-openclash/
 svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash luci-app-openclash/
