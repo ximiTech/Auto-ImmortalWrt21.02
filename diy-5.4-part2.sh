@@ -32,8 +32,8 @@ cd feeds/packages/net
 rm -rf smartdns/
 svn co https://github.com/coolsnowwolf/packages/trunk/net/smartdns smartdns/
 rm -rf smartdns/.svn/
-# sed -i 's/1.2022.38/1.2023.41/g' smartdns/Makefile
-sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=ccadadd3fb710c23e9cbbd48fd396b19580427fd/g' smartdns/Makefile
+sed -i 's/1.2023.41/1.2023.42/g' smartdns/Makefile
+sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=0340d272c3e7a618a5b605d7daf8ab07901ab63a/g' smartdns/Makefile
 sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=skip/g' smartdns/Makefile
 cd ../../..
 
