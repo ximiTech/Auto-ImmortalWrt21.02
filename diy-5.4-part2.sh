@@ -23,8 +23,10 @@ sed -i "s/PKG_HASH:=.*/PKG_HASH:=23544deda10340c053bea6f15a93fed6ea7f5aaa85316bf
 sed -i "178i \	$(INSTALL_BIN) ./files/50-dnsmasq-migrate-ipset.sh $(1)/etc/uci-defaults" package/network/services/dnsmasq/Makefile
 rm -rf package/network/services/dnsmasq/files
 svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsmasq/files package/network/services/dnsmasq/files/
+rm -rf package/network/services/dnsmasq/files/.svn/
 rm -rf package/network/services/dnsmasq/patches
 svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsmasq/patches package/network/services/dnsmasq/patches/
+rm -rf package/network/services/dnsmasq/patches/.svn/
 
 ########### 维持xray-core的版本 ###########
 # sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.7.2/g' feeds/passwall_packages/xray-core/Makefile
