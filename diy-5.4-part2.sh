@@ -36,14 +36,20 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsma
 # sed -i 's/PKG_RELEASE:=.*/PKG_RELEASE:=1/g' feeds/passwall_packages/xray-plugin/Makefile
 # sed -i 's/PKG_HASH:=.*/PKG_HASH:=skip/g' feeds/passwall_packages/xray-plugin/Makefile
 
-########### 替换immortal的内置的smartdns版本 ###########
 cd feeds/packages/net
+########### 替换immortal的内置的smartdns版本 ###########
 rm -rf smartdns/
 svn co https://github.com/coolsnowwolf/packages/trunk/net/smartdns smartdns/
 rm -rf smartdns/.svn/
 sed -i 's/1.2023.41/1.2023.42/g' smartdns/Makefile
 sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=0340d272c3e7a618a5b605d7daf8ab07901ab63a/g' smartdns/Makefile
 sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=skip/g' smartdns/Makefile
+
+########### 替换immortal的内置的openssh版本 ###########
+rm -rf openssh/
+svn co https://github.com/coolsnowwolf/packages/trunk/net/openssh openssh/
+rm -rf openssh/.svn/
+
 cd ../../..
 
 ########### 添加immortal的upx包 ###########
