@@ -47,7 +47,7 @@ sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=skip/g' smartdns/Makefile
 
 ########### 替换immortal的内置的openssh版本 ###########
 rm -rf openssh/
-svn co https://github.com/coolsnowwolf/packages/trunk/net/openssh openssh/
+svn co https://github.com/immortalwrt/packages/trunk/net/openssh openssh/
 rm -rf openssh/.svn/
 
 cd ../../..
