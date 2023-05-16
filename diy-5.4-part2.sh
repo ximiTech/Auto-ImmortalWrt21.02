@@ -17,6 +17,10 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 ########### 更改大雕源码（可选）###########
 # sed -i "s/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=5.15/g" target/linux/x86/Makefile
 
+########### 更改dnsmasq的版本 ###########
+sed -i "s/PKG_UPSTREAM_VERSION:=.*/PKG_UPSTREAM_VERSION:=2.88/g" package/network/services/dnsmasq/Makefile
+sed -i "s/PKG_HASH:=.*/PKG_HASH:=23544deda10340c053bea6f15a93fed6ea7f5aaa85316bfc671ffa6d22fbc1b3/g" package/network/services/dnsmasq/Makefile
+
 ########### 维持xray-core的版本 ###########
 # sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.7.2/g' feeds/passwall_packages/xray-core/Makefile
 # sed -i 's/PKG_RELEASE:=.*/PKG_RELEASE:=1/g' feeds/passwall_packages/xray-core/Makefile
