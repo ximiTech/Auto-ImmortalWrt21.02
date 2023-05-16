@@ -26,10 +26,6 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsma
 rm -rf package/network/services/dnsmasq/patches
 svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsmasq/patches package/network/services/dnsmasq/patches/
 
-########### 更改openssl的版本 ###########
-rm -rf package/libs/openssl
-svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/openssl package/libs/openssl/
-
 ########### 维持xray-core的版本 ###########
 # sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.7.2/g' feeds/passwall_packages/xray-core/Makefile
 # sed -i 's/PKG_RELEASE:=.*/PKG_RELEASE:=1/g' feeds/passwall_packages/xray-core/Makefile
