@@ -59,6 +59,8 @@ cd feeds/packages/utils
 rm -rf upx/
 svn co https://github.com/immortalwrt/packages/trunk/utils/upx upx/
 rm -rf upx/.svn/
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=4.0.2/g' upx/Makefile
+sed -i 's/PKG_HASH:=.*/PKG_HASH:=skip/g' upx/Makefile
 cd ../../..
 ln -sf ../../../feeds/packages/utils/upx package/feeds/packages/upx
 
