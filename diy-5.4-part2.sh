@@ -28,17 +28,27 @@ rm -rf package/network/services/dnsmasq/patches
 svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsmasq/patches package/network/services/dnsmasq/patches/
 rm -rf package/network/services/dnsmasq/patches/.svn/
 
+cd feeds/packages/net
+########### 维持v2ray-core的版本 ###########
+rm -rf v2ray-core/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core v2ray-core/
+rm -rf v2ray-core/.svn/
+
+########### 维持v2ray-plugin的版本 ###########
+rm -rf v2ray-plugin/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin v2ray-plugin/
+rm -rf v2ray-plugin/.svn/
+
 ########### 维持xray-core的版本 ###########
-# sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.7.2/g' feeds/passwall_packages/xray-core/Makefile
-# sed -i 's/PKG_RELEASE:=.*/PKG_RELEASE:=1/g' feeds/passwall_packages/xray-core/Makefile
-# sed -i 's/PKG_HASH:=.*/PKG_HASH:=skip/g' feeds/passwall_packages/xray-core/Makefile
+rm -rf xray-core/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core xray-core/
+rm -rf xray-core/.svn/
 
 ########### 维持xray-plugin的版本 ###########
-# sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.7.2/g' feeds/passwall_packages/xray-plugin/Makefile
-# sed -i 's/PKG_RELEASE:=.*/PKG_RELEASE:=1/g' feeds/passwall_packages/xray-plugin/Makefile
-# sed -i 's/PKG_HASH:=.*/PKG_HASH:=skip/g' feeds/passwall_packages/xray-plugin/Makefile
+rm -rf xray-plugin/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin xray-plugin/
+rm -rf xray-plugin/.svn/
 
-cd feeds/packages/net
 ########### 替换immortal的内置的smartdns版本 ###########
 rm -rf smartdns/
 svn co https://github.com/coolsnowwolf/packages/trunk/net/smartdns smartdns/
