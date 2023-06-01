@@ -30,6 +30,10 @@ rm -rf package/network/services/dnsmasq/patches/.svn/
 
 cd feeds/packages/net
 ########### 维持v2ray-core的版本 ###########
+rm -rf chinadns-ng/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng chinadns-ng/
+rm -rf chinadns-ng/.svn/
+
 rm -rf v2ray-core/
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core v2ray-core/
 rm -rf v2ray-core/.svn/
