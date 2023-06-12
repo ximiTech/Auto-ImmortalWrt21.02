@@ -29,11 +29,24 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/network/services/dnsma
 rm -rf package/network/services/dnsmasq/patches/.svn/
 
 cd feeds/packages/net
-########### 维持v2ray-core的版本 ###########
+
 rm -rf chinadns-ng/
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng chinadns-ng/
 rm -rf chinadns-ng/.svn/
 
+rm -rf brook/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook brook/
+rm -rf brook/.svn/
+
+rm -rf hysteria/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria hysteria/
+rm -rf hysteria/.svn/
+
+rm -rf naiveproxy/
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy naiveproxy/
+rm -rf naiveproxy/.svn/
+
+########### 维持v2ray-core的版本 ###########
 rm -rf v2ray-core/
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core v2ray-core/
 rm -rf v2ray-core/.svn/
