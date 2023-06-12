@@ -58,7 +58,7 @@ rm -rf smartdns/
 svn co https://github.com/coolsnowwolf/packages/trunk/net/smartdns smartdns/
 rm -rf smartdns/.svn/
 sed -i 's/1.2023.41/1.2023.42/g' smartdns/Makefile
-sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=ad43c796cfcf4787f78306ce1302e854c9e57d07/g' smartdns/Makefile
+sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=45346705d8f24d5b8146d0261e330005341c8ee3/g' smartdns/Makefile
 sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=skip/g' smartdns/Makefile
 
 ########### 替换immortal的内置的openssh版本 ###########
