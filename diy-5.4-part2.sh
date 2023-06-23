@@ -124,14 +124,4 @@ wget https://github.com/ximiTech/intelligentclicker/raw/main/luci-app-msd_lite.z
 unzip -q ./luci-app-msd_lite.zip
 rm ./luci-app-msd_lite.zip
 
-########### 修改immortal的内置的luci-app-frpc版本 ###########
-rm -rf luci-app-frpc/
-svn co https://github.com/ximiTech/bf-package-master/trunk/lean/luci-app-frpc luci-app-frpc/
-rm -rf luci-app-frpc/.svn/
-
-########### 修改immortal的内置的luci-app-frps版本 ###########
-rm -rf luci-app-frps/
-svn co https://github.com/ximiTech/bf-package-master/trunk/lean/luci-app-frps luci-app-frps/
-rm -rf luci-app-frps/.svn/
-
 cd ../../..
